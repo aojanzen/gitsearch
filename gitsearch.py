@@ -25,12 +25,10 @@ else:
     searchstring = f"language:{language} topic:{topic}"
     results = gh.search_repositories(searchstring)
 
-print(f"\n\ngitsearch has found {results.totalCount} repositories with topic {topic}:")
-print()
+print(f"\ngitsearch has found {results.totalCount} repositories with topic\
+ '{topic}'.\n")
 
-for index, repository in enumerate(results, 1):
-    print(f"({index}) {repository.name}")
+# for index, repository in enumerate(results, 1):
+#     print(f"({index}) {repository.name}")
 
-
-print()
-#    found = gh.search_topics("chess")
+#     found = gh.search_topics("chess")
